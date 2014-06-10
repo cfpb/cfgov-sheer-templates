@@ -15,7 +15,31 @@ Coming soon: what Sheer is, how its templating system works.
 
 ## What's in this repo?
 
-Coming soon: descriptions of each file and its purpose.
+### `_layouts`
+
+#### `base.html`
+
+The base template on which all others are built. Includes:
+
+```html
+<html>
+    <head>
+        <!-- Global meta -->
+        <!-- Page-specific meta -->
+        <!-- Styles -->
+        <!-- Head scripts -->
+    </head>
+    <body>
+        <!-- Analytics -->
+        <!-- Twitter share URL building -->
+        <!-- Demo banner -->
+        {% include "header.html" %}
+        {% block content %}
+        {% include "footer.html" %}
+        <!-- Body scripts -->
+    </body>
+</html>
+```
 
 
 ## How to use these
@@ -29,6 +53,10 @@ We welcome your feedback and contributions.
 
 - [Find out about contributing](CONTRIBUTING.md)
 - [File a bug](https://github.com/cfpb/cfgov-sheer-templates/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
+
+### Known issues
+
+- cfgov-refresh demo banner needs to be made optional
 
 
 ----
