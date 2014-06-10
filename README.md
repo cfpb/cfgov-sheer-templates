@@ -41,6 +41,14 @@ The base template on which all others are built. Includes:
 </html>
 ```
 
+#### `header.html`
+
+Included in `base.html`, before main content area.
+
+#### `footer.html`
+
+Included in `base.html`, after main content area.
+
 
 ## How to use these
 
@@ -71,4 +79,4 @@ We welcome your feedback and contributions.
 
 ## Credits and references
 
-1. [Jinja2 templating documentation]
+1. [Jinja2 templating documentation](http://jinja.pocoo.org/docs/)
