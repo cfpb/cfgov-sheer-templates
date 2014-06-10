@@ -1,3 +1,3 @@
-## v0.0.1 – June 10, 2014
+## v0.1.0 – June 10, 2014
 
-- Stand up repo with standard meta documentation.
+- Stand up repo with `_layouts` folder and standard meta documentation.
