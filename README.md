@@ -23,31 +23,40 @@ The base template on which all others are built. Includes:
 
 ```html
 <html>
+    {% import macros %}
     <head>
         <!-- Global meta -->
         <!-- Page-specific meta -->
-        <!-- Styles -->
-        <!-- Head scripts -->
+        <!-- Global styles -->
+        {% block additional_styles %}
+        <!-- Global head scripts -->
+        {% block head_scripts %}
     </head>
     <body>
         <!-- Analytics -->
-        <!-- Twitter share URL building -->
-        <!-- Demo banner -->
-        {% include "header.html" %}
+        {% block body_top %}
+        {% block include_header %}
         {% block content %}
-        {% include "footer.html" %}
-        <!-- Body scripts -->
+        {% block include_footer %}
+        {% block body_bottom %}
+        <!-- Global body scripts -->
+        {% block body_scripts %}
     </body>
 </html>
 ```
 
 #### `header.html`
 
-Included in `base.html`, before main content area.
+Included in `base.html`, within `include_header` block.
 
 #### `footer.html`
 
-Included in `base.html`, after main content area.
+Included in `base.html`, within `include_footer` block.
+
+#### `macros.html`
+
+Stores macros that can be called in templates.
+Imported into `base.html` so that it's available everywhere.
 
 
 ## How to use these
