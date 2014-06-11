@@ -24,7 +24,7 @@
     ==================
 -->
 
-    <title>{% block title %}MISSING TITLE{% endblock title %}</title>
+    <title>{% block title %}MISSING TITLE{% endblock %}</title>
     <meta name="description"
           content="{% block desc %}MISSING DESCRIPTION{% endblock %}">
 
@@ -130,7 +130,7 @@
     <!-- PRIMARY CONTENT -->
 {% block content scoped %}
     This will be replaced in templates that extend this template and override "content".
-{% endblock content %}
+{% endblock %}
     <!-- /PRIMARY CONTENT -->
 
 
@@ -152,7 +152,7 @@
 
     <script src="../static/js/main.min.js"></script>
 
-{% block body_scripts %}{% endblock body_scripts %}
+{% block body_scripts %}{% endblock %}
 
 </body>
 
