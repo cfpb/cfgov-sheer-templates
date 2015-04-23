@@ -1,66 +1,80 @@
 <!DOCTYPE html>
+
+<!--
+    ============================================================================
+
+    Hey! If you're viewing this, you should probably come work on our Technology
+    & Innovation team. We're always looking for a few great designers,
+    developers, data scientists, and network, infrastructure, privacy and
+    security pros. Keep an eye on our job opportunities at:
+    http://www.consumerfinance.gov/jobs/
+
+    Also, you can see more of our code at https://github.com/cfpb
+
+    And by the way, there’s another hidden message somewhere on the following
+    page: http://www.consumerfinance.gov/jobs/technology-innovation-fellows/.
+    See if you can find it! Hint: picture yourself embedded in our work.
+
+    ============================================================================
+-->
+
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 
-{% from "macros.html" import share_twitter_url with context %}
-
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# {% block og_article_prefix %}{% endblock %}">
 
-<!--
+{#
     ===========
     GLOBAL META
     ===========
--->
+#}
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--
+{#
     ==================
     PAGE-SPECIFIC META
     ==================
--->
+#}
 
     <title>{% block title %}MISSING TITLE{% endblock %}</title>
     <meta name="description"
           content="{% block desc %}MISSING DESCRIPTION{% endblock %}">
 
-    <!-- Open Graph properties -->
-        <!--   Required  -->
-        <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
-        <meta property="og:type" content="{% block og_type %}website{% endblock %}">
-        <meta property="og:url" content="{{ request.url }}">
-        <meta property="og:image"
-              content="{% block og_image %}http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/img/logo.svg{% endblock %}">
-        <!--   Optional -->
-        <meta property="og:description" content="{% block og_desc %}{{ self.desc() }}{% endblock %}">
-        <meta property="og:site_name" content="Consumer Financial Protection Bureau">
-        <!--   Facebook -->
-        <meta property="fb:app_id" content="210516218981921">
-        {% block og_article_author %}{% endblock %}
-    <!-- End of Open Graph properties -->
+{# Open Graph properties #}
+    {#   Required  #}
+    <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:image"
+          content="{% block og_image %}http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/img/logo.svg{% endblock %}">
+    {#   Optional #}
+    <meta property="og:description" content="{% block og_desc %}{{ self.desc() }}{% endblock %}">
+    <meta property="og:site_name" content="Consumer Financial Protection Bureau">
+    {#   Facebook #}
+    <meta property="fb:app_id" content="210516218981921">
+    {% block og_article_author %}{% endblock %}
+{# End of Open Graph properties #}
 
-    <!-- Explicit favicon link needed for testing. Remove for production. -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-<!--
+{#
     ======
     STYLES
     ======
     The number of stylesheets here must be kept to a minimum.
     Unless adding a significant amount of CSS that is specific to a single page or section of the site,
     all new styles should be added to src/static/css/main.less.
--->
+#}
 
 <!--[if lt IE 9]>      <link rel="stylesheet" href="/static/css/main.ie.min.css"> <![endif]-->
 <!--[if gt IE 8]><!--> <link rel="stylesheet" href="/static/css/main.min.css"> <!--<![endif]-->
 
 {% block additional_styles %}{% endblock %}
 
-<!--
+{#
     ============
     HEAD SCRIPTS
     ============
@@ -68,7 +82,7 @@
     All other scripts should go before the closing body tag.
     If you come across a script that makes a convincing case to be included in the head,
     then file an issue or PR to discuss including it.
--->
+#}
 
 <!--[if lt IE 9]>
     <script src="/static/vendor/html5shiv/html5shiv-printshiv.min.js"></script>
@@ -86,69 +100,69 @@
 
 <body>
 
-<!--
+{#
     =========
     Analytics
     =========
     We are double tagging with classic analytics and tag manager so that we can
     test any differences between the two.
--->
+#}
 
-    <!-- CLASSIC ANALYTICS -->
+    {# CLASSIC ANALYTICS #}
     <script>
         var _gaq=[['_setAccount','UA-20466645-3'],['_setDomainName', '.consumerfinance.gov'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-    <!-- /CLASSIC ANALYTICS -->
+    {# /CLASSIC ANALYTICS #}
 
-    <!-- GOOGLE TAG MANAGER -->
-    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSMF3R"
+    {# GOOGLE TAG MANAGER #}
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KMMLRS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KSMF3R');</script>
-    <!-- /GOOGLE TAG MANAGER -->
+    })(window,document,'script','dataLayer','GTM-KMMLRS');</script>
+    {# /GOOGLE TAG MANAGER #}
 
-<!--
+{#
     =================
     Begin page source
     =================
--->
+#}
 
 {% block body_top %}{% endblock %}
 
 
 {% block include_header %}
-    {% include "header.html" %}
+    {% include "nemo_header.html" %}
 {% endblock %}
 
 
-    <!-- PRIMARY CONTENT -->
+    {# PRIMARY CONTENT #}
 {% block content scoped %}
     This will be replaced in templates that extend this template and override "content".
 {% endblock %}
-    <!-- /PRIMARY CONTENT -->
+    {# /PRIMARY CONTENT #}
 
 
 {% block include_footer %}
-    {% include "footer.html" %}
+    {% include "nemo_footer.html" %}
 {% endblock %}
 
 
 {% block body_bottom %}{% endblock %}
 
 
-<!--
+{#
     ============
     BODY SCRIPTS
     ============
     The number of scripts here must be kept to a minimum. Unless adding a significant amount of JS that is
     specific to a single page or section of the site, all custom JS should be added to src/static/js/app.js.
--->
+#}
 
     <script src="/static/js/main.min.js"></script>
 
