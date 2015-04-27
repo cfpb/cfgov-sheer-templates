@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.2.3 - April 27, 2015
+
+### Added
+- `nemo_subnav.html` include to `include_footer` block, without which the
+  Nemo dropdown navigation would not work. :flushed:
+
+
 ## 0.2.2 - April 27, 2015
 
 ### Added
