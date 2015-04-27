@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.2.2 - April 27, 2015
+
+### Added
+- JS needed for Nemo bits.
+
+
 ## 0.2.1 - April 27, 2015
 
 ### Changed
