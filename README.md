@@ -54,7 +54,7 @@ Included in `base.html`, these files contain replicas of the current
 (as of April 2015) consumerfinance.gov header, navigation and footer,
 adapted to have basic responsiveness.
 
-Styles for these are found in `nemo.less` and `nemo_shim.less`.
+Styles for these are found in `nemo.less` and `nemo-shim.less`.
 
 #### `sidebar_nav.html`
 

@@ -67,12 +67,15 @@
     The number of stylesheets here must be kept to a minimum.
     Unless adding a significant amount of CSS that is specific to a single page or section of the site,
     all new styles should be added to src/static/css/main.less.
+    To add a stylesheet to a specific page, override the css block with the super directive,
+    so that your stylesheet is added and main.min.css is retained.
+    For more info, see the Jinja docs: http://jinja.pocoo.org/docs/dev/templates/#super-blocks
 #}
 
+{% block css %}
 <!--[if lt IE 9]>      <link rel="stylesheet" href="/static/css/main.ie.min.css"> <![endif]-->
 <!--[if gt IE 8]><!--> <link rel="stylesheet" href="/static/css/main.min.css"> <!--<![endif]-->
-
-{% block additional_styles %}{% endblock %}
+{% endblock %}
 
 {#
     ============
@@ -82,8 +85,11 @@
     All other scripts should go before the closing body tag.
     If you come across a script that makes a convincing case to be included in the head,
     then file an issue or PR to discuss including it.
+    The head_scripts block is provided as a hook to use Modernizr in place of
+    these scripts on select pages, if desired.
 #}
 
+{% block head_scripts %}
 <!--[if lt IE 9]>
     <script src="/static/vendor/html5shiv/html5shiv-printshiv.min.js"></script>
 <![endif]-->
@@ -93,8 +99,7 @@
         var docElement = document.documentElement;
         docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
     </script>
-
-{% block head_scripts %}{% endblock %}
+{% endblock %}
 
 </head>
 
@@ -141,11 +146,11 @@
 {% endblock %}
 
 
-    {# PRIMARY CONTENT #}
-{% block content scoped %}
+{# PRIMARY CONTENT #}
+{% block content %}
     This will be replaced in templates that extend this template and override "content".
 {% endblock %}
-    {# /PRIMARY CONTENT #}
+{# /PRIMARY CONTENT #}
 
 
 {% block include_footer %}
@@ -162,11 +167,14 @@
     ============
     The number of scripts here must be kept to a minimum. Unless adding a significant amount of JS that is
     specific to a single page or section of the site, all custom JS should be added to src/static/js/app.js.
+    To add a script to a specific page, override the body_scripts block with the super directive,
+    so that your script is added and main.min.js is retained.
+    For more info, see the Jinja docs: http://jinja.pocoo.org/docs/dev/templates/#super-blocks
 #}
 
+{% block body_scripts %}
     <script src="/static/js/main.min.js"></script>
-
-{% block body_scripts %}{% endblock %}
+{% endblock %}
 
 </body>
 
