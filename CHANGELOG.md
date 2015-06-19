@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.2.4 - June 19, 2015
+
+### Added
+- `base.html` to output the baseurl variable which can be set in pages
+
 ## 0.2.3 - April 27, 2015
 
 ### Added
