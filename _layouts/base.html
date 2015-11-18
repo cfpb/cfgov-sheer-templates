@@ -3,17 +3,16 @@
 <!--
     ============================================================================
 
-    Hey! If you're viewing this, you should probably come work on our Technology
-    & Innovation team. We're always looking for a few great designers,
-    developers, data scientists, and network, infrastructure, privacy and
-    security pros. Keep an eye on our job opportunities at:
-    http://www.consumerfinance.gov/jobs/
+    Hey! If you're viewing this, you should probably come work on our
+    Technology & Innovation team. We're always looking for a few great
+    designers; developers; data scientists; and network, infrastructure,
+    privacy, and security pros.
+    Keep an eye on our job opportunities at http://www.consumerfinance.gov/jobs/
 
     Also, you can see more of our code at https://github.com/cfpb
 
-    And by the way, there’s another hidden message somewhere on the following
-    page: http://www.consumerfinance.gov/jobs/technology-innovation-fellows/.
-    See if you can find it! Hint: picture yourself embedded in our work.
+    If you’d like to be notified when we post new tech job opportunities,
+    please send an email with your full name to tech@cfpb.gov.
 
     ============================================================================
 -->
@@ -73,8 +72,8 @@
 #}
 
 {% block css %}
-<!--[if lt IE 9]>      <link rel="stylesheet" href="/static/css/main.ie.min.css"> <![endif]-->
-<!--[if gt IE 8]><!--> <link rel="stylesheet" href="/static/css/main.min.css"> <!--<![endif]-->
+<!--[if lt IE 9]>      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.ie.min.css') }}"> <![endif]-->
+<!--[if gt IE 8]><!--> <link rel="stylesheet" href="{{ url_for('static', filename='css/main.min.css') }}"> <!--<![endif]-->
 {% endblock %}
 
 {#
@@ -91,7 +90,7 @@
 
 {% block head_scripts %}
 <!--[if lt IE 9]>
-    <script src="/static/vendor/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="{{ url_for('static', filename='vendor/html5shiv/dist/html5shiv-printshiv.min.js') }}"></script>
 <![endif]-->
 
     <script>
@@ -107,22 +106,11 @@
 
 {#
     =========
-    Analytics
+    ANALYTICS
     =========
-    We are double tagging with classic analytics and tag manager so that we can
-    test any differences between the two.
 #}
 
-    {# CLASSIC ANALYTICS #}
-    <script>
-        var _gaq=[['_setAccount','UA-20466645-3'],['_setDomainName', '.consumerfinance.gov'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-    {# /CLASSIC ANALYTICS #}
-
-    {# GOOGLE TAG MANAGER #}
+    {# Google Tag Manager #}
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KMMLRS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -130,11 +118,11 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KMMLRS');</script>
-    {# /GOOGLE TAG MANAGER #}
+    {# End Google Tag Manager #}
 
 {#
     =================
-    Begin page source
+    BEGIN PAGE SOURCE
     =================
 #}
 
@@ -174,10 +162,9 @@
 #}
 
 {% block body_scripts %}
-    <script src="/static/js/main.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.min.js') }}"></script>
 {% endblock %}
 
 </body>
 
 </html>
-
