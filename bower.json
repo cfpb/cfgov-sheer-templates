@@ -1,12 +1,9 @@
 {
   "name": "cfgov-sheer-templates",
-  "version": "0.3.0",
-  "homepage": "https://cfpb.github.io/",
-  "authors": [
-    "Consumer Financial Protection Bureau <tech@consumerfinance.gov>"
-  ],
   "description": "Sheer templates for consumerfinance.gov",
+  "version": "0.3.0",
   "main": "_layouts/base.html",
+  "license": "SEE LICENSE IN TERMS.md (Public Domain / CC0)",
   "keywords": [
     "templates",
     "html",
@@ -14,12 +11,15 @@
     "sheer",
     "jinja"
   ],
-  "license": "Public domain",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "authors": [
+    {
+      "name": "Consumer Financial Protection Bureau",
+      "email": "tech@cfpb.gov",
+      "homepage": "https://cfpb.github.io)"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cfpb/cfgov-sheer-templates.git"
+  }
 }
