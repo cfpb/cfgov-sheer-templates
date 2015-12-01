@@ -51,12 +51,12 @@ Includes are template partials and Jinja helpers.
 #### `nemo_header.html`, `nemo_subnav.html`, and `nemo_footer.html`
 
 Included in `base.html`, these files contain replicas of the current
-(as of April 2015) consumerfinance.gov header, navigation and footer,
+(as of November 2015) consumerfinance.gov header, navigation and footer,
 adapted to have basic responsiveness.
 
 Styles for these are found in `nemo.less` and `nemo-shim.less`.
 
-#### `sidebar_nav.html`
+#### `sidenav.html`
 
 This file sets up a left-hand navigation sidebar based on the designs modeled
 by [cfgov-refresh](https://github.com/cfpb/cfgov-refresh).
@@ -76,30 +76,70 @@ Coming soon: getting started instructions.
 
 ### Using sidebar navigation
 
-To activate the sidebar navigation, edit the `nav_items` variable in the
-`sidebar_nav.html` file.
+To activate the sidebar navigation, first create a `nav_items` variable
+in a new include file in your project.
+The recommended naming convention is `_vars-<projectname>.html`.
 Each item has three components: the path, an ID for the item, and the link text.
 
-Use this example from the Owning a Home project to guide you:
+Use this example from the FinEd Resources project to guide you:
 
 ```jinja
 {% set nav_items = [
-    ('../', 'index', 'Owning a Home'),
-    ('../check-rates/', 'check-rates', 'Check interest rates'),
-    ('../loan-options/', 'loan-options', 'Understand loan options'),
-    ('../process/', 'process', 'Know the process'),
-    ('../prepare-worksheets/', 'prepare-worksheets', 'Preparation worksheets'),
-    ('../resources/checklist_mortgage_closing.pdf', 'closing-checklist', 'Closing checklist'),
-    ('../resources/mortgage_closing_forms.pdf', 'closing-forms', 'Closing forms explainer')
+    ('/adult-financial-education/', 'adult-financial-education', 'Adult financial education'),
+    ('/youth-financial-education/', 'youth-financial-education', 'Youth financial education'),
+    ('/library-resources', 'library-resources', 'Resources for libraries'),
+    ('/parents/', 'parents', 'Resources for parents'),
+    ('/managing-someone-elses-money/', 'managing-someone-elses-money', 'Guides for managing someone else’s money'),
 ] -%}
 ```
 
-On each page, set the `active_page` variable to enable highlighting the current
-page in the sidebar.
+On each page, after extending `layout-side-nav.html`,
+set the `active_nav_id` variable to enable highlighting the current page,
+and then import the `_vars` file you just created:
 
 ```jinja
-{% set active_page = 'loan-options' -%}
+{% set active_nav_id = 'library-resources' -%}
+{% import '_vars-libraries.html' as libraries with context %}
 ```
+
+You'll also want to grab the latest styles for the navigation component from
+[the cfgov-refresh project](https://github.com/cfpb/cfgov-refresh/blob/flapjack/cfgov/unprocessed/css/nav-secondary.less)
+
+**If you'd like to use two-level sidebar navigation,**
+then for each parent nav item that will have children:
+
+1. Add a fourth element, named `<parentitem>.children` to the parent item
+   in the `nav_items` declaration, like so:
+
+   ```jinja
+   ('/library-resources', 'library-resources', 'Resources for libraries', libraries.children),
+   ```
+1. Add a line like this, above the `nav_items` declaration:
+
+   ```jinja
+   {% set libraries = { 'children': null } if not libraries else libraries %}
+   ```
+1. Create a `_vars-<parentitem>.html` file with a `children` declaration:
+
+   ```jinja
+   {% set children = [
+       ('/library-resources/program-ideas/', 'program-ideas', 'Program ideas'),
+       ('/library-resources/librarian-training/', 'librarian-training', 'Librarian training'),
+       ('/library-resources/marketing-materials/', 'marketing-materials', 'Marketing materials'),
+       ('/library-resources/websites-videos-courses/', 'websites-videos-courses', 'Websites, videos, and courses'),
+   ] -%}
+   ```
+1. Import the new `_vars` file in the parent and its children,
+   under the import of the main `_vars` file.
+   Continuing with the Libraries example, the first four lines of our
+   `library-resources/index.html` file now look like this:
+
+   ```jinja
+   {% extends 'layout-side-nav.html' %}
+   {% set active_nav_id = 'library-resources' %}
+   {% import '_vars-libraries.html' as libraries with context %}
+   {% import '_vars-resources.html' as vars with context %}
+   ```
 
 _**Note:** Use of this navigation sidebar requires your project to have the
 [cf-expandables](https://github.com/cfpb/cf-expandables) package available._

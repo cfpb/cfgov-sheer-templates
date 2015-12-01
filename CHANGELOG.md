@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.3.0 - November 18, 2015
+
+### Added
+- Link to Planning for Retirement in Nemo shim nav
+- `sidenav.html` now supports second-level navidation items
+
+### Changed
+- Updated to latest recruiting comment at the top of the page
+
+### Removed
+- Google Analytics snippet; we're all Google Tag Manager, all the time, now
+- An extraneous file
+
+### Fixed
+- Typos in social media links
+- Static asset links in `base.html` now use the `url_for` function for
+  smarter path resolution
+- Path to html5shiv
+
+
 ## 0.2.3 - April 27, 2015
 
 ### Added
