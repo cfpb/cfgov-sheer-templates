@@ -4,11 +4,17 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.3.1 - December 1, 2015
+
+### Fixed
+- `bower.json` cleaned up so that it doesn't ignore everything anymore.
+
+
 ## 0.3.0 - November 18, 2015
 
 ### Added
 - Link to Planning for Retirement in Nemo shim nav
-- `sidenav.html` now supports second-level navidation items
+- `sidenav.html` now supports second-level navigation items
 
 ### Changed
 - Updated to latest recruiting comment at the top of the page
