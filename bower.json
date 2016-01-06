@@ -1,15 +1,14 @@
 {
   "name": "cfgov-sheer-templates",
   "description": "Sheer templates for consumerfinance.gov",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "main": "_layouts/base.html",
   "license": "SEE LICENSE IN TERMS.md (Public Domain / CC0)",
   "keywords": [
     "templates",
-    "html",
-    "css",
     "sheer",
-    "jinja"
+    "jinja",
+    "cfpb"
   ],
   "authors": [
     {
