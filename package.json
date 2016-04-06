@@ -1,22 +1,28 @@
 {
   "name": "cfgov-sheer-templates",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Sheer templates for consumerfinance.gov",
-  "main": "_layouts/base.html",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cfpb/cfgov-sheer-templates.git"
-  },
   "keywords": [
     "templates",
     "sheer",
     "jinja",
     "cfpb"
   ],
-  "author": "Consumer Financial Protection Bureau",
-  "license": "SEE LICENSE IN TERMS.md (Public Domain / CC0)",
+  "homepage": "https://github.com/cfpb/cfgov-sheer-templates#readme",
   "bugs": {
     "url": "https://github.com/cfpb/cfgov-sheer-templates/issues"
   },
-  "homepage": "https://github.com/cfpb/cfgov-sheer-templates#readme"
+  "license": "SEE LICENSE IN TERMS.md (Public Domain / CC0)",
+  "author": "Consumer Financial Protection Bureau",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfpb/cfgov-sheer-templates.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-cfgov-refresh-stuff": "./update-cfgov-refresh-stuff.sh"
+  },
+  "dependencies": {
+    "cfgov-refresh": "git://github.com/cfpb/cfgov-refresh#atomic_footer"
+  }
 }

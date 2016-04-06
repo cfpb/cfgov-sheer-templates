@@ -89,15 +89,19 @@
 #}
 
 {% block head_scripts %}
+{# Customized Modernizr build that includes html5shiv.
+   Built via gulp-modernizer in the cfgov-refresh `scripts.js` task. #}
+<script src="{{ static('js/modernizr.min.js') }}"></script>
+
 <!--[if lt IE 9]>
-    <script src="{{ url_for('static', filename='vendor/html5shiv/dist/html5shiv-printshiv.min.js') }}"></script>
+<script>
+    // If in IE8 reverse no-js/js class change made by modernizr.
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace( /(^|\s)js(\s|$)/, '$1no-js$2' );
+</script>
 <![endif]-->
 
-    <script>
-        // Confirm availability of JS and remove no-js class from html
-        var docElement = document.documentElement;
-        docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
-    </script>
+<!--[if IE 9]><script src="{{ static('js/ie/common.ie.js') }}"></script><![endif]-->
 {% endblock %}
 
 </head>
@@ -130,7 +134,7 @@
 
 
 {% block include_header %}
-    {% include "nemo_header.html" %}
+    {% include "header.html" %}
 {% endblock %}
 
 
@@ -142,8 +146,7 @@
 
 
 {% block include_footer %}
-    {% include "nemo_subnav.html" %}
-    {% include "nemo_footer.html" %}
+    {% include "footer.html" %}
 {% endblock %}
 
 

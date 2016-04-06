@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 2.0.0 - January 6, 2016
+
+### Added
+- Support for including the cfgov-refresh header and footer via `global_include`
+  in the HTML templates and building the necessary CSS and JS,
+  which is checked in in the `static/` folder.
+
+### Removed
+- The Nemo shim.
+
+
+## 1.0.0 - January 6, 2016
+
+### Added
+- `package.json` for npm publishing support
+
+
 ## 0.3.1 - December 1, 2015
 
 ### Fixed
