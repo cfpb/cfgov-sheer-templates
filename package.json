@@ -22,7 +22,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-cfgov-refresh-stuff": "./update-cfgov-refresh-stuff.sh"
   },
-  "dependencies": {
-    "cfgov-refresh": "git://github.com/cfpb/cfgov-refresh#atomic_footer"
+  "devDependencies": {
+    "cfgov-refresh": "git://github.com/cfpb/cfgov-refresh#flapjack"
   }
 }
