@@ -22,3 +22,6 @@ cp node_modules/cfgov-refresh/cfgov/static_built/js/atomic/header.js static/js/
 cp node_modules/cfgov-refresh/cfgov/static_built/js/atomic/footer.js static/js/
 cp node_modules/cfgov-refresh/cfgov/static_built/js/modernizr.min.js static/js/
 cp node_modules/cfgov-refresh/cfgov/static_built/js/ie/common.ie.js static/js/
+
+# Set paths to small flag images to be root-relative
+sed -i '' 's/..\/img\/us-flag/\/static\/img\/us-flag/g' static/css/*.css
