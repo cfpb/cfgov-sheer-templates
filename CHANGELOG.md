@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
-## 2.0.0 - January 6, 2016
+# 2.0.1 - March 7, 2016
+
+### Changed
+- Updated to latest header and footer CSS from cfgov-refresh.
+
+
+## 2.0.0 - March 6, 2016
 
 ### Added
 - Support for including the cfgov-refresh header and footer via `global_include`

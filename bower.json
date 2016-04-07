@@ -1,7 +1,7 @@
 {
   "name": "cfgov-sheer-templates",
   "description": "Sheer templates for consumerfinance.gov",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "_layouts/base.html",
   "license": "SEE LICENSE IN TERMS.md (Public Domain / CC0)",
   "keywords": [
