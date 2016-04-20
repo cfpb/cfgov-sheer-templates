@@ -3,10 +3,15 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+
 # 2.0.2 - March 20, 2016
 
 ### Added
 - Added styles for skip-nav link
+
+### Fixed
+- Menu background now extends all the way to the edge on sites using older
+  versions of cf-grid/cf-layout.
 
 
 # 2.0.1 - March 7, 2016
