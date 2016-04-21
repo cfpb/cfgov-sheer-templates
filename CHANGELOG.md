@@ -3,27 +3,38 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
-# 2.0.2 - March 20, 2016
+
+# 2.0.3 - April 20, 2016
+
+### Changed
+- Got the latest style and script fixes from cfgov-refresh
+
+
+# 2.0.2 - April 20, 2016
 
 ### Added
 - Added styles for skip-nav link
 
+### Fixed
+- Menu background now extends all the way to the edge on sites using older
+  versions of cf-grid/cf-layout
 
-# 2.0.1 - March 7, 2016
+
+# 2.0.1 - April 7, 2016
 
 ### Changed
-- Updated to latest header and footer CSS from cfgov-refresh.
+- Updated to latest header and footer CSS from cfgov-refresh
 
 
-## 2.0.0 - March 6, 2016
+## 2.0.0 - April 6, 2016
 
 ### Added
 - Support for including the cfgov-refresh header and footer via `global_include`
   in the HTML templates and building the necessary CSS and JS,
-  which is checked in in the `static/` folder.
+  which is checked in in the `static/` folder
 
 ### Removed
-- The Nemo shim.
+- The Nemo shim
 
 
 ## 1.0.0 - January 6, 2016
@@ -35,7 +46,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ## 0.3.1 - December 1, 2015
 
 ### Fixed
-- `bower.json` cleaned up so that it doesn't ignore everything anymore.
+- `bower.json` cleaned up so that it doesn't ignore everything anymore
 
 
 ## 0.3.0 - November 18, 2015
@@ -62,7 +73,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ### Added
 - `nemo_subnav.html` include to `include_footer` block, without which the
-  Nemo dropdown navigation would not work. :flushed:
+  Nemo dropdown navigation would not work :flushed:
 
 
 ## 0.2.2 - April 27, 2015
@@ -75,8 +86,8 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ### Changed
 - Changes CSS and JS blocks in `base.html` to make it possible to
-  override the defaults, if necessary.
-  Instructions added for using the super function to extend a block.
+  override the defaults, if necessary
+  Instructions added for using the super function to extend a block
 
 
 ## 0.2.0 – April 23, 2015
@@ -88,18 +99,18 @@ can be imported into any cf.gov project.
 
 ### Added
 - Adds `_includes` folder and splits template files between that and
-  `_layouts` according to the philosophy established by cfgov-refresh.
-- Brings in the Nemo bridge template files and Less from owning-a-home.
-- Brings in the suite of layouts and new macros from cfgov-refresh.
-- Adds a `bower.json` file.
+  `_layouts` according to the philosophy established by cfgov-refresh
+- Brings in the Nemo bridge template files and Less from owning-a-home
+- Brings in the suite of layouts and new macros from cfgov-refresh
+- Adds a `bower.json` file
 
 
 ## v0.1.1 – June 11, 2014
 
-- Add more blocks to override things in the base template.
-- Create a file to hold macros; pull out Twitter share URL generator into that.
+- Add more blocks to override things in the base template
+- Create a file to hold macros; pull out Twitter share URL generator into that
 
 
 ## v0.1.0 – June 10, 2014
 
-- Stand up repo with `_layouts` folder and standard meta documentation.
+- Stand up repo with `_layouts` folder and standard meta documentation
