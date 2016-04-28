@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+# 2.0.4 - April 28, 2016
+
+### Changed
+- Got the latest style and script fixes from cfgov-refresh, notably including:
+  - Adding a short delay on main menu hover activation
+
+
 # 2.0.3 - April 20, 2016
 
 ### Changed
