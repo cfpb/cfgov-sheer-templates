@@ -15,10 +15,14 @@ gulp scripts:polyfill
 gulp scripts:ie
 
 # Copy the on-demand CSS/JSS into this repo's checked-in static files location
+# TODO: Uncomment secondary-navigation bits when they land in cfgov-refresh
+#       through the merging of https://github.com/cfpb/cfgov-refresh/pull/2059
 cd ../../
 cp node_modules/cfgov-refresh/cfgov/static_built/css/header.css static/css/
+#cp node_modules/cfgov-refresh/cfgov/static_built/css/secondary-navigation.css static/css/
 cp node_modules/cfgov-refresh/cfgov/static_built/css/footer.css static/css/
 cp node_modules/cfgov-refresh/cfgov/static_built/js/atomic/header.js static/js/
+#cp node_modules/cfgov-refresh/cfgov/static_built/js/atomic/secondary-navigation.js static/js/
 cp node_modules/cfgov-refresh/cfgov/static_built/js/atomic/footer.js static/js/
 cp node_modules/cfgov-refresh/cfgov/static_built/js/modernizr.min.js static/js/
 cp node_modules/cfgov-refresh/cfgov/static_built/js/ie/common.ie.js static/js/
