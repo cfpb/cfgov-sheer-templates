@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+# 2.0.6 - May 11, 2016
+
+### Changed
+- Added print styles for hiding non-applicable site features.
+
+
 # 2.0.5 - May 11, 2016
 
 ### Changed
