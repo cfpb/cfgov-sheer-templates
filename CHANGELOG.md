@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+# 2.0.4 - May 6, 2016
+
+### Changed
+- Added secondary navigation JS and CSS.
+
 
 # 2.0.3 - April 20, 2016
 
