@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+# 2.1.0 - May 13, 2016
+
+### Changed
+- Added secondary navigation and dependent markup.
+- Added secondary navigation assets to update script.
+- Changed sidebar modifiers to remove flush on bottom.
+
+
 # 2.0.6 - May 11, 2016
 
 ### Changed

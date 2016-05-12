@@ -4,11 +4,11 @@
     docs/layout-side-nav.html
 
     Since layout-side-nav.html extends from layout-1-3.html all we need to do
-    is set some side nav variables and override the `content_sidebar` block to
-    add the nav macro.
+    is set some secondary navigation (side nav) variables and override the
+    `content_sidebar` block to add the nav macro.
 #}
 
-{# Side nav vars #}
+{# Secondary navigation vars #}
 {% if section_vars and section_vars.nav_items %}
     {% set nav_items = section_vars.nav_items %}
 {% else %}
@@ -18,13 +18,14 @@
 
 {# Adding the side nav macro #}
 {% block content_sidebar %}
-    {% import "sidenav.html" as sidenav %}
-    {{ sidenav.render(vars.nav_items, active_nav_id) }}
+    {% import "secondary-navigation.html" as secondary_navigation %}
+    {{ secondary_navigation.render(active_nav_id, vars.nav_items) }}
 {% endblock %}
 
 {# Extra classes needed for .content_sidebar #}
 {% block content_sidebar_modifiers -%}
-    content__flush-all-on-small
+    content__flush-top-on-small
+    content__flush-sides-on-small
 {%- endblock %}
 
 {# Extra classes needed for .content_main #}
