@@ -56,7 +56,7 @@ adapted to have basic responsiveness.
 
 Styles for these are found in `nemo.less` and `nemo-shim.less`.
 
-#### `sidenav.html`
+#### `secondary-navigation.html`
 
 This file sets up a left-hand navigation sidebar based on the designs modeled
 by [cfgov-refresh](https://github.com/cfpb/cfgov-refresh).
@@ -76,7 +76,7 @@ Coming soon: getting started instructions.
 
 ### Using sidebar navigation
 
-To activate the sidebar navigation, first create a `nav_items` variable
+To activate the sidebar secondary navigation, first create a `nav_items` variable
 in a new include file in your project.
 The recommended naming convention is `_vars-<projectname>.html`.
 Each item has three components: the path, an ID for the item, and the link text.
