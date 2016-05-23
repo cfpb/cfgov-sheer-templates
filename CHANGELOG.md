@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+
+# 2.1.1 - May 23, 2016
+
+### Changed
+- Updated header JavaScript to handle `behavior_` prefix on FlyoutMenu.
+
+
 # 2.1.0 - May 13, 2016
 
 ### Changed
