@@ -1,6 +1,6 @@
 {
   "name": "cfgov-sheer-templates",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Sheer templates for consumerfinance.gov",
   "keywords": [
     "templates",
@@ -23,6 +23,6 @@
     "update-cfgov-refresh-stuff": "./update-cfgov-refresh-stuff.sh"
   },
   "devDependencies": {
-    "cfgov-refresh": "git://github.com/cfpb/cfgov-refresh#flapjack"
+    "cfgov-refresh": "git://github.com/cfpb/cfgov-refresh"
   }
 }

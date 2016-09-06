@@ -4,13 +4,20 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
-# 2.1.1 - May 23, 2016
+## 2.1.2 - September 2, 2016
+
+### Changed
+- Updated CSS and JS from the latest cfgov-refresh code.
+- Updated expandable HTML to be an organism.
+
+
+## 2.1.1 - May 23, 2016
 
 ### Changed
 - Updated header JavaScript to handle `behavior_` prefix on FlyoutMenu.
 
 
-# 2.1.0 - May 13, 2016
+## 2.1.0 - May 13, 2016
 
 ### Changed
 - Added secondary navigation and dependent markup.
@@ -18,32 +25,32 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Changed sidebar modifiers to remove flush on bottom.
 
 
-# 2.0.6 - May 11, 2016
+## 2.0.6 - May 11, 2016
 
 ### Changed
 - Added print styles for hiding non-applicable site features.
 
 
-# 2.0.5 - May 11, 2016
+## 2.0.5 - May 11, 2016
 
 ### Changed
 - Added secondary navigation JS and CSS.
 
 
-# 2.0.4 - April 28, 2016
+## 2.0.4 - April 28, 2016
 
 ### Changed
 - Got the latest style and script fixes from cfgov-refresh, notably including:
   - Adding a short delay on main menu hover activation
 
 
-# 2.0.3 - April 20, 2016
+## 2.0.3 - April 20, 2016
 
 ### Changed
 - Got the latest style and script fixes from cfgov-refresh
 
 
-# 2.0.2 - April 20, 2016
+## 2.0.2 - April 20, 2016
 
 ### Added
 - Added styles for skip-nav link
@@ -53,7 +60,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
   versions of cf-grid/cf-layout
 
 
-# 2.0.1 - April 7, 2016
+## 2.0.1 - April 7, 2016
 
 ### Changed
 - Updated to latest header and footer CSS from cfgov-refresh
