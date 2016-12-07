@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 2.1.3 - December 7, 2016
+
+### Changed
+- Google Tag Manager snippet (moved it to the <head>).
+
+
 ## 2.1.2 - September 2, 2016
 
 ### Changed
