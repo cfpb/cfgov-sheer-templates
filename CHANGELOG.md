@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 2.1.4 - February 6, 2016
+
+### Changed
+- Modifield `@grid_wrapper-width` to match Capital Framework.
+
 
 ## 2.1.3 - December 7, 2016
 
