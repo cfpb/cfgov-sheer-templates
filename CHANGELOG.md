@@ -3,10 +3,18 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+
+## 2.1.5 - July 13, 2017
+
+### Changed
+- Updates on-demand CSS and JS again, mostly to fix a relative path issue
+  for linked image files.
+
+
 ## 2.1.4 - July 11, 2017
 
 ### Changed
-- Updates ondemand header/footer/secondary-nav to Capital Framework v4.
+- Updates on-demand header/footer/secondary-nav to Capital Framework v4.
 
 
 ## 2.1.3 - December 7, 2016
