@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 2.1.6 - August 3, 2017
+
+### Changed
+- Updates on-demand header CSS to add mega menu header and footer styles.
+
+
 ## 2.1.5 - July 13, 2017
 
 ### Changed
