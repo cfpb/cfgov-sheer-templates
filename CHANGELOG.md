@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 2.1.8 - September 20, 2017
+
+### Changed
+- Updates on-demand header.
+
 ## 2.1.7 - September 19, 2017
 
 ### Changed
