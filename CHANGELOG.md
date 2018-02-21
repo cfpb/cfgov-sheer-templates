@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 2.1.9 - February 21, 2018
+
+### Changed
+- Changes paths in on-demand header and footer CSS to point at root font path.
 
 ## 2.1.8 - September 20, 2017
 
