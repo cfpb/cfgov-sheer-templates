@@ -1,3 +1,5 @@
+# :warning: THIS REPO IS DEPRECATED (5/18/2018) :warning:
+
 # cfgov-sheer-templates
 
 This is a repository of base templates for consumerfinance.gov pages
